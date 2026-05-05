@@ -71,7 +71,7 @@ persones_3 = [
 
 persones_4 = [
     {'nom': 'Anna Garcia', 'edat': 25},
-    {'nom': 'Marc Puig', 'edat': '42'}, 
+    {'nom': 'Marc Puig', 'edat': 42}, 
     {'nom': 'Laura Martí', 'edat': 35}
 ]
 
@@ -130,7 +130,7 @@ def trobar_producte_mes_car():
         return None
     
     preu_max = productes[0]["preu"]
-    producte_mes_car = None
+    producte_mes_car = productes[0]
     
     for producte in productes:
         if producte["preu"] > preu_max:
