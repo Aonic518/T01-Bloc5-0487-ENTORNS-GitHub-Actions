@@ -201,16 +201,3 @@ def comptar_empleats_per_departament(empresa):
     for departament in empresa["departaments"]:
         departaments[departament["nom"]] = len(departament["empleats"])
     return departaments
-
-# ========== PROVES ==========
-
-print("=== Prova 1: ===")
-resultat = comptar_empleats_per_departament(empresa_de_prova)
-print(f"Empleats per departament: {resultat}")
-print()
-
-print("=== Prova 2: ===")
-empresa_de_prova["departaments"] = []
-resultat = comptar_empleats_per_departament(empresa_de_prova)
-print(f"Empleats per departament: {resultat}")
-print()
