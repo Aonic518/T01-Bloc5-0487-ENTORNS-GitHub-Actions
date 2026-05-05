@@ -79,3 +79,12 @@ def test_comptar_empleats_per_departament(empresa,res_esperat):
     resultat = comptar_empleats_per_departament(empresa) # Cridem la funció amb l’empresa de prova
     assert resultat == res_esperat                         # Comprovem que el resultat coincideix amb l’esperat
 
+def test_error_edat_maxima():
+    resultat = trobar_edat_maxima(persones_1)
+    assert resultat == 100  # ❌ incorrecte (hauria de ser 67)
+
+def test_error_tipus():
+    resultat = trobar_edat_maxima(persones_1)
+    assert isinstance(resultat, str)  # ❌ hauria de ser int
+
+
