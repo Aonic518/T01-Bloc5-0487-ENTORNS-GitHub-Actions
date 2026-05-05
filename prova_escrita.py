@@ -16,7 +16,7 @@ string for tascab2-03
 
 def afegir_edat_a_tots(persones, anys):
     if isinstance(anys, int) and anys > 0:
-        for persona in personas:
+        for persona in persones:
             persona["edat"] += anys
             
 
@@ -44,11 +44,11 @@ def trobar_edat_maxima(persones):
 def trobar_edat_maxima(persones):
     if not persones:
         return -1
-    for persona in personas:
+    for persona in persones:
         if not isinstance(persona, dict) or "nom" not in persona or "edat" not in persona:
             return -1
         
-    edats = [persona["edat"] for persona in personas]
+    edats = [persona["edat"] for persona in persones]
     return max(edats)
 
 persones_1 = [
